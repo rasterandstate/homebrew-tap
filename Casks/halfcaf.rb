@@ -2,10 +2,10 @@ cask "halfcaf" do
   version "1.0.0"
   sha256 "7c552cc622f67ee1e0563c5dfdac932aa64e087d98f7dd6137589906e8fd547e"
 
-  url "https://github.com/rasterandstate/halfcaf/releases/download/v#{version}/halfcaf-#{version}.dmg"
+  url "https://downloads.halfcaf.app/halfcaf-#{version}.dmg"
   name "halfcaf"
   desc "Headless work mode for macOS: caffeinate + dim + mute + DND"
-  homepage "https://github.com/rasterandstate/halfcaf"
+  homepage "https://halfcaf.app"
 
   depends_on macos: ">= :sonoma"
 
