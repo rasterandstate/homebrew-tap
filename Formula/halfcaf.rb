@@ -1,7 +1,7 @@
 class Halfcaf < Formula
   desc "Headless work mode for macOS: caffeinate + dim + mute + DND"
   homepage "https://github.com/rasterandstate/halfcaf"
-  url "https://github.com/rasterandstate/halfcaf/archive/refs/tags/v0.4.0.tar.gz"
+  url "https://github.com/rasterandstate/halfcaf/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "REPLACE_WITH_TARBALL_SHA256_AFTER_TAGGING"
   license "MIT"
   head "https://github.com/rasterandstate/halfcaf.git", branch: "main"
