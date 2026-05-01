@@ -3,7 +3,7 @@ cask "halfcaf" do
   sha256 "7c552cc622f67ee1e0563c5dfdac932aa64e087d98f7dd6137589906e8fd547e"
 
   url "https://downloads.halfcaf.app/halfcaf-#{version}.dmg"
-  name "halfcaf"
+  name "Halfcaf"
   desc "Headless work mode for macOS: caffeinate + dim + mute + DND"
   homepage "https://halfcaf.app"
 
