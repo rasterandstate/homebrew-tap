@@ -1,9 +1,9 @@
 class Halfcaf < Formula
   desc "Headless work mode for macOS: caffeinate + dim + mute + DND"
   homepage "https://halfcaf.app"
-  version "1.0.1"
+  version "1.0.2"
   url "https://downloads.halfcaf.app/halfcaf-#{version}-arm64.tar.gz"
-  sha256 "c02d4e5afe167bb9b3cbd4638c227d897801d39a357be5dc3657ed84cc3c20b0"
+  sha256 "017c38bc8f8cd9aef02447fe4e66022ef85483681350e2d23618d492403a57e6"
   license "MIT"
 
   depends_on macos: ">= :sonoma"
