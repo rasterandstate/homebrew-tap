@@ -1,6 +1,6 @@
 cask "halfcaf" do
-  version "1.0.3"
-  sha256 "aeb96670ca4c0d8f97e0d9bec5e9f0bf114b1074e3e5c105b3caf991b10b99fe"
+  version "1.0.4"
+  sha256 "8ce00041b95d7d25d46868b12c3af1e4a2b7c16550cf661566b8344c90405fa9"
 
   url "https://downloads.halfcaf.app/halfcaf-#{version}.dmg"
   name "Halfcaf"
