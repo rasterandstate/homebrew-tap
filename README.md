@@ -12,6 +12,7 @@ brew tap rasterandstate/tap
 
 | Name | Type | Install | Description |
 | ---- | ---- | ------- | ----------- |
+| [fj](https://rasterhub.com/rasterstate/fj) | formula | `brew install fj` | Command-line tool for Forgejo, in the spirit of `gh` |
 | [halfcaf](https://github.com/rasterandstate/halfcaf) | formula | `brew install halfcaf` | Headless work mode for macOS, CLI |
 | [halfcaf](https://github.com/rasterandstate/halfcaf) | cask | `brew install --cask halfcaf` | Headless work mode for macOS, menu bar app |
 
