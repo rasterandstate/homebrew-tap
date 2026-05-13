@@ -19,13 +19,12 @@ class Fj < Formula
   # add an `on_linux do … end` block here once the tarball is uploaded.
 
   def install
-    target = if OS.mac?
-      Hardware::CPU.arm? ? "darwin-aarch64" : "darwin-x86_64"
-    else
-      "linux-x86_64"
-    end
-    cd "fj-v#{version}-#{target}"
+    # The tarball contains a single top-level directory
+    # `fj-v<version>-<target>/{fj,README.md,LICENSE,CHANGELOG.md}`. Homebrew
+    # auto-cds into that directory before running `install`, so we can just
+    # install relative to cwd.
     bin.install "fj"
+    pkgshare.install "README.md", "LICENSE", "CHANGELOG.md"
   end
 
   test do
