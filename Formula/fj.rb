@@ -1,17 +1,17 @@
 class Fj < Formula
   desc "Command-line tool for Forgejo, in the spirit of gh"
   homepage "https://rasterhub.com/rasterstate/fj"
-  version "0.1.0"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://rasterhub.com/rasterstate/fj/releases/download/v#{version}/fj-v#{version}-darwin-aarch64.tar.gz"
-      sha256 "eb5fd0206a5194179f6d1aecee7fe4a4a5434e1f44ed75a525f7f41d18670061"
+      sha256 "ab6468067f2dee3d5f84d2094499969a6eb029e47b7c65a1a190b697e1642932"
     end
     on_intel do
       url "https://rasterhub.com/rasterstate/fj/releases/download/v#{version}/fj-v#{version}-darwin-x86_64.tar.gz"
-      sha256 "d7102095f051f4af7af1d9dbf34678df85142fdfece71dcab0cc111aeb942c2c"
+      sha256 "ff8b5655876ea81baf0fa2c1fd35f9c88247d527c91a5fce8f49542ff8d3a9da"
     end
   end
 
