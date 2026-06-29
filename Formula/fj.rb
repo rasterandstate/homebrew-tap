@@ -1,32 +1,34 @@
 class Fj < Formula
   desc "Command-line tool for Forgejo, in the spirit of gh"
   homepage "https://rasterhub.com/rasterstate/fj"
-  version "0.1.3"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://rasterhub.com/rasterstate/fj/releases/download/v#{version}/fj-v#{version}-darwin-aarch64.tar.gz"
-      sha256 "ac71a225caeb5ce191784f4002ecfc15547d3f2028d18dfc13e4e6f319de198b"
+      url "https://rasterhub.com/rasterstate/fj/releases/download/v0.3.0/fj-v0.3.0-darwin-aarch64.tar.gz"
+      sha256 "3d5513ee41006fe48bd6868d5683be2980a7c1692d04dee257ada4271af6057d"
     end
     on_intel do
-      url "https://rasterhub.com/rasterstate/fj/releases/download/v#{version}/fj-v#{version}-darwin-x86_64.tar.gz"
-      sha256 "23c0589932ce00afff5f2e4c71e1f7ca9ca4f4913e24be4974a00991e4db78ae"
+      url "https://rasterhub.com/rasterstate/fj/releases/download/v0.3.0/fj-v0.3.0-darwin-x86_64.tar.gz"
+      sha256 "5a93d28eeb987d4b5b7c909d292526df76ca34f673ce1888f86856c9594a0606"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://rasterhub.com/rasterstate/fj/releases/download/v#{version}/fj-v#{version}-linux-x86_64.tar.gz"
-      sha256 "08de71f46f2c27c8a87970cf6d6e31125370518edc93e5a905bfa1dc5378bd90"
+      url "https://rasterhub.com/rasterstate/fj/releases/download/v0.3.0/fj-v0.3.0-linux-x86_64.tar.gz"
+      sha256 "e3a1e79a4c54fc8d5b4375e05f7f120d65117f683e1e659430596f13698cca8a"
     end
   end
 
   def install
-    # The tarball contains a single top-level directory
-    # `fj-v<version>-<target>/{fj,README.md,LICENSE,CHANGELOG.md}`. Homebrew
-    # auto-cds into that directory before running `install`, so we can just
-    # install relative to cwd.
+    target = if OS.mac?
+      Hardware::CPU.arm? ? "darwin-aarch64" : "darwin-x86_64"
+    else
+      "linux-x86_64"
+    end
+    cd "fj-#{version}-#{target}"
     bin.install "fj"
     pkgshare.install "README.md", "LICENSE", "CHANGELOG.md"
   end
